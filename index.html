@@ -585,23 +585,24 @@
 
         <div class="row no-gutters block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form action="mail.php" class="bg-light p-4 p-md-5 contact-form" method="POST" id="contact-form">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Naam" id="name">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="e-mailadres" id="email">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Onderwerp" id="subject">
-              </div>
-              <div class="form-group">
-                <textarea name="message"  cols="30" rows="7" class="form-control" placeholder="Bericht" id="message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Verzend bericht" class="btn btn-primary py-3 px-5" onclick="document.getElementById('contact-form').submit();">
-              </div>
-            </form>
+			  <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/pim.slagboom@outlook.com" method="post" class="bg-light p-4 p-md-5 contact-form">
+				  <fieldset id="fs-frm-inputs">
+					  <div class="form-group">
+						  <label for="full-name"></label>
+						  <input type="text" name="name" id="full-name" placeholder="voor- en achternaam" required="">
+					  </div>
+					  <div class="form-group">
+					  		<label for="email-address"></label>
+					 	 	<input type="email" name="_replyto" id="email-address" placeholder="e-mailadres" required="">
+					  </div>
+					  <div class="form-group">
+						  <label for="message"></label>
+					  		<textarea rows="5" name="message" id="message" placeholder="bericht" required=""></textarea>
+					  		<input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+					  </div>
+				  </fieldset>
+				  <input type="submit" value="verzenden">
+			  </form>
           
           </div>
 
